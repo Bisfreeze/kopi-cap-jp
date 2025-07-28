@@ -1,549 +1,649 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JP Coffee Factory - Premium Indonesian Coffee Powder</title>
-    <link rel="stylesheet" href="styles.css">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<link rel="stylesheet" href="src/style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kopi Cap JP - Premium Coffee Beans</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Animated Background -->
-    <div class="animated-bg">
-        <div class="coffee-bean bean1"></div>
-        <div class="coffee-bean bean2"></div>
-        <div class="coffee-bean bean3"></div>
-        <div class="coffee-bean bean4"></div>
-        <div class="coffee-bean bean5"></div>
-        <div class="steam steam1"></div>
-        <div class="steam steam2"></div>
-        <div class="steam steam3"></div>
-    </div>
+		<!-- Swiper CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	</head>
+	<body class="font-inter text-white">
+		<!-- Top Announcement Bar -->
+		<!-- <div class="bg-gray-900 text-center py-2 text-sm">
+			<div class="flex items-center justify-center space-x-4 overflow-x-auto">
+				<span class="text-orange-400 font-medium">Free Shipping Over $40</span>
+			</div>
+		</div> -->
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="nav-brand">
-                <div class="logo-container">
-                    <!-- <i class="fas fa-coffee logo-icon"></i> -->
-                     <img src="logo_kopi_jp.png" alt="logo jp coffee" class="logo-icon-img">
-                    <div class="logo-glow"></div>
-                </div>
-                <h1 class="brand-text">JP Coffee Factory</h1>
-            </div>
-            <nav class="nav-menu">
-                <a href="#home" class="nav-link">
-                    <span class="nav-text">Home</span>
-                    <div class="nav-underline"></div>
-                </a>
-                <a href="#products" class="nav-link">
-                    <span class="nav-text">Products</span>
-                    <div class="nav-underline"></div>
-                </a>
-                <a href="#about" class="nav-link">
-                    <span class="nav-text">About</span>
-                    <div class="nav-underline"></div>
-                </a>
-                <a href="#contact" class="nav-link">
-                    <span class="nav-text">Contact</span>
-                    <div class="nav-underline"></div>
-                </a>
-            </nav>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
+		<!-- Navigation -->
+		<nav class="fixed top-8 left-0 right-0 z-50 px-6">
+			<div
+				class="max-w-7xl mx-auto flex items-center justify-between bg-black/20 backdrop-blur-md rounded-full px-6 py-3 border border-white/10"
+			>
+				<!-- Logo -->
+				<div class="flex items-center">
+					<img src="/logo_kopi_jp.png" alt="Kopi Cap JP" class="h-8 w-8" />
+				</div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-award"></i>
-                    <span>Premium Quality Since 2020</span>
-                </div>
-                <h2 class="hero-title">
-                    <span class="title-line">Premium Coffee</span>
-                    <span class="title-line highlight">Powder</span>
-                </h2>
-                <p class="hero-description">Experience the rich, authentic taste of Indonesian coffee with our premium KOPI BUBUK CAP JP. Crafted with passion, delivered with quality.</p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="1000">0</div>
-                        <div class="stat-label">Happy Customers</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="1000">0</div>
-                        <div class="stat-label">Product Sizes</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="1000">0</div>
-                        <div class="stat-label">Quality Guarantee</div>
-                    </div>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn btn-primary btn-glow">
-                        <span>Explore Products</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary btn-glass">
-                        <span>Get Quote</span>
-                        <i class="fas fa-phone"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+				<!-- Search and Login -->
+				<div class="flex items-center space-x-4">
+					<div class="relative">
+						<input
+							type="text"
+							placeholder="Search..."
+							class="bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-white/40 placeholder-gray-300"
+						/>
+						<svg
+							class="absolute right-3 top-2.5 h-4 w-4 text-gray-300"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+							></path>
+						</svg>
+					</div>
+					<button class="md:hidden text-white">
+						<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16"
+							></path>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</nav>
 
-    <!-- Product Showcase -->
-    <section id="products" class="products">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Our Products</div>
-                <h3 class="section-title">Premium Coffee Powder Collection</h3>
-                <p class="section-description">KOPI BUBUK CAP JP - Available in three convenient sizes to meet all your coffee needs</p>
-            </div>
+		<!-- Hero Section -->
+		<section class="relative h-screen flex items-center justify-center overflow-hidden">
+			<!-- Background Video -->
+			<div class="absolute inset-0 z-0">
+				<video id="bg-video" autoplay muted loop class="w-full h-full object-cover">
+					<source src="/introvid.mp4" type="video/mp4" />
+					<!-- Fallback background image if video fails -->
+				</video>
 
-            <div class="product-showcase">
-                <!-- Product Image -->
-                <div class="product-image">
-                    <div class="image-container">
-                        <div class="image-glow"></div>
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/860314c4-66e2-459f-a112-63e7d7b7ecd4.jpg-b8cUOxQVUFDBHbaQsHMT4G3Ue5sEm3.jpeg" alt="KOPI BUBUK CAP JP Coffee Powder" class="product-img">
-                        <div class="image-overlay">
-                            <div class="overlay-content">
-                                <i class="fas fa-search-plus"></i>
-                                <span>View Details</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="floating-elements">
-                        <div class="floating-icon icon1"><i class="fas fa-leaf"></i></div>
-                        <div class="floating-icon icon2"><i class="fas fa-award"></i></div>
-                        <div class="floating-icon icon3"><i class="fas fa-heart"></i></div>
-                    </div>
-                </div>
+				<!-- Dark overlay -->
+				<div class="absolute inset-0 bg-black/50"></div>
+			</div>
 
-                <!-- Product Details -->
-                <div class="product-details">
-                    <div class="product-info">
-                        <h4 class="product-title">KOPI BUBUK CAP JP</h4>
-                        <div class="product-rating">
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span class="rating-text">5.0 (250+ Reviews)</span>
-                        </div>
-                        <p class="product-description">Our signature coffee powder blend, made from carefully selected Indonesian coffee beans. Rich in flavor, perfect aroma, and consistent quality in every package.</p>
-                    </div>
+			<!-- Hero Content -->
+			<div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+				<!-- Main Logo/Brand -->
+				<div class="mb-8">
+					<h1 class="font-playfair text-8xl md:text-9xl font-light tracking-wider mb-4">
+						Coffee from Heaven
+					</h1>
+				</div>
 
-                    <!-- Available Sizes -->
-                    <div class="product-sizes">
-                        <h5 class="sizes-title">Choose Your Perfect Size:</h5>
-                        <div class="sizes-grid">
-                            <div class="size-card" data-size="90g">
-                                <div class="size-icon">
-                                    <i class="fas fa-coffee"></i>
-                                </div>
-                                <div class="size-header">
-                                    <h6>Starter Pack</h6>
-                                    <div class="size-weight">90g</div>
-                                </div>
-                                <div class="size-content">
-                                    <p>Perfect for trying our premium blend</p>
-                                    <div class="size-features">
-                                        <span><i class="fas fa-check"></i> Trial Size</span>
-                                        <span><i class="fas fa-check"></i> Great Value</span>
-                                    </div>
-                                </div>
-                                <div class="size-hover-effect"></div>
-                            </div>
+				<!-- Subtitle -->
+				<p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-12 leading-relaxed">
+					Join us in seeking quality, truth and accountability in coffee. Together, we journey to find the
+					finest and most unique coffees in the world.
+				</p>
 
-                            <div class="size-card popular" data-size="255g">
-                                <div class="popular-badge">
-                                    <i class="fas fa-crown"></i>
-                                    <span>Most Popular</span>
-                                </div>
-                                <div class="size-icon">
-                                    <i class="fas fa-coffee"></i>
-                                </div>
-                                <div class="size-header">
-                                    <h6>Family Pack</h6>
-                                    <div class="size-weight">255g</div>
-                                </div>
-                                <div class="size-content">
-                                    <p>Perfect for families and regular coffee lovers</p>
-                                    <div class="size-features">
-                                        <span><i class="fas fa-check"></i> Best Value</span>
-                                        <span><i class="fas fa-check"></i> Family Size</span>
-                                    </div>
-                                </div>
-                                <div class="size-hover-effect"></div>
-                            </div>
+				<!-- CTA Button -->
+				<button
+					id="explore-btn"
+					class="inline-flex items-center bg-transparent border-2 border-white text-white px-8 py-4 text-sm font-semibold tracking-wider hover:bg-white hover:text-black transition-all duration-300 group"
+				>
+					EXPLORE OFFERINGS
+					<svg
+						class="ml-3 h-4 w-4 group-hover:translate-x-1 transition-transform"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M17 8l4 4m0 0l-4 4m4-4H3"
+						></path>
+					</svg>
+				</button>
+			</div>
 
-                            <div class="size-card" data-size="500g">
-                                <div class="size-icon">
-                                    <i class="fas fa-coffee"></i>
-                                </div>
-                                <div class="size-header">
-                                    <h6>Value Pack</h6>
-                                    <div class="size-weight">500g</div>
-                                </div>
-                                <div class="size-content">
-                                    <p>Maximum value for coffee enthusiasts</p>
-                                    <div class="size-features">
-                                        <span><i class="fas fa-check"></i> Bulk Size</span>
-                                        <span><i class="fas fa-check"></i> Best Price</span>
-                                    </div>
-                                </div>
-                                <div class="size-hover-effect"></div>
-                            </div>
-                        </div>
-                    </div>
+			<!-- Scroll Indicator -->
+			<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+				<button
+					id="scroll-btn"
+					class="flex flex-col items-center text-white/70 hover:text-white transition-colors group"
+				>
+					<span class="text-sm font-medium mb-2 tracking-wider">SCROLL</span>
+					<div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+						<div class="w-1 h-3 bg-white/50 rounded-full mt-2 animate-bounce"></div>
+					</div>
+					<svg
+						class="mt-2 h-4 w-4 group-hover:translate-y-1 transition-transform"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M19 14l-7 7m0 0l-7-7m7 7V3"
+						></path>
+					</svg>
+				</button>
+			</div>
+		</section>
 
-                    <!-- Product Features -->
-                    <div class="product-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <span>Premium Quality</span>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-leaf"></i>
-                            </div>
-                            <span>Natural Ingredients</span>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <span>Factory Fresh</span>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span>Authentic Taste</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+		<!-- Chat Widget -->
+		<div class="fixed bottom-6 right-6 z-50">
+			<button
+				id="chat-btn"
+				class="bg-black/80 backdrop-blur-md text-white px-4 py-3 rounded-full flex items-center space-x-2 hover:bg-black transition-colors shadow-lg"
+			>
+				<div class="w-2 h-2 bg-green-400 rounded-full"></div>
+				<span class="text-sm font-medium">Chat with us</span>
+			</button>
+		</div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">About Us</div>
-                <h3 class="section-title">Why Choose JP Coffee Factory?</h3>
-                <p class="section-description">We are a dedicated coffee powder manufacturing company committed to delivering the finest Indonesian coffee experience to your cup.</p>
-            </div>
+		<!-- Our Blends Section -->
+		<section class="min-h-screen blends-section text-black py-16 md:py-20 lg:py-32">
+			<div class="max-w-7xl mx-auto px-4 md:px-6">
+				<div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center min-h-[80vh]">
+					<!-- Left Content -->
+					<div class="lg:pr-12 space-y-4 md:space-y-6 text-center lg:text-left">
+						<h2 class="font-bold text-5xl md:text-6xl lg:text-7xl leading-tight blackletter-font">
+							our blends
+						</h2>
 
-            <div class="about-cards">
-                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card-background"></div>
-                    <div class="card-icon">
-                        <i class="fas fa-industry"></i>
-                        <div class="icon-glow"></div>
-                    </div>
-                    <h4>Modern Factory</h4>
-                    <p>State-of-the-art manufacturing facility ensuring consistent quality and hygiene standards with cutting-edge technology.</p>
-                    <div class="card-hover-effect"></div>
-                </div>
+						<h3 class="text-lg md:text-xl font-semibold text-gray-800">Re-Stock On The Classics</h3>
 
-                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card-background"></div>
-                    <div class="card-icon">
-                        <i class="fas fa-users"></i>
-                        <div class="icon-glow"></div>
-                    </div>
-                    <h4>Expert Team</h4>
-                    <p>Experienced professionals dedicated to crafting the perfect coffee powder blend with years of expertise in coffee processing.</p>
-                    <div class="card-hover-effect"></div>
-                </div>
+						<p class="text-gray-700 text-base md:text-lg leading-relaxed max-w-lg">
+							Our approach to creating blends is a bit different at Onyx. Instead of choosing coffees from
+							specific countries or regions that will, in theory, intertwine well to develop complex &
+							cohesive flavors like most, we start from the end and work our way back. This perspective
+							means we choose to create a particular flavor profile first - deciding which acidities,
+							sugars, and fats we want to accentuate for the coffee. Once a flavor profile has been set,
+							we then start cupping blind through a lot of coffees to find these specific attributes.
+						</p>
 
-                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card-background"></div>
-                    <div class="card-icon">
-                        <i class="fas fa-award"></i>
-                        <div class="icon-glow"></div>
-                    </div>
-                    <h4>Quality Assurance</h4>
-                    <p>Rigorous quality control processes to ensure every package meets our high standards and exceeds customer expectations.</p>
-                    <div class="card-hover-effect"></div>
-                </div>
-            </div>
+						<p class="text-gray-600 text-sm md:text-base">Learn more about our blends by clicking below</p>
 
-            <!-- Process Timeline -->
-            <div class="process-section">
-                <h4 class="process-title">Our Coffee Making Process</h4>
-                <div class="process-timeline">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h5>Bean Selection</h5>
-                            <p>Carefully selected premium Indonesian coffee beans</p>
-                        </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h5>Roasting</h5>
-                            <p>Perfect roasting process to enhance flavor and aroma</p>
-                        </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h5>Grinding</h5>
-                            <p>Precision grinding for optimal powder consistency</p>
-                        </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <h5>Packaging</h5>
-                            <p>Sealed fresh in premium packaging for quality preservation</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+						<button
+							class="bg-black text-white px-8 py-4 text-sm font-bold tracking-wider hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+						>
+							ORDER NOW
+						</button>
+					</div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Contact Us</div>
-                <h3 class="section-title">Let's Start a Conversation</h3>
-                <p class="section-description">Ready to experience our premium coffee powder? Contact us for orders, inquiries, or partnership opportunities.</p>
-            </div>
+					<!-- Right Image -->
+					<div class="lg:pl-12 flex justify-center lg:justify-end">
+						<div class="relative max-w-md w-full">
+							<img
+								src="/ourblend.jpg"
+								alt="Coffee package being held"
+								class="w-full h-auto object-cover shadow-2xl"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-            <div class="contact-content">
-                <!-- Contact Info -->
-                <div class="contact-info">
-                    <h4>Get In Touch</h4>
+		<!-- Awards/Achievements Section -->
+		<section class="awards-section py-20 md:py-28 lg:py-32 relative overflow-hidden">
+			<!-- Background Image -->
+			<div class="absolute inset-0 z-0">
+				<img
+					src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2084&q=80"
+					alt="Coffee roasting competition"
+					class="w-full h-full object-cover"
+				/>
+				<div class="absolute inset-0 bg-black/30"></div>
+			</div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                            <div class="icon-pulse"></div>
-                        </div>
-                        <div class="contact-details">
-                            <p class="contact-label">Phone</p>
-                            <p class="contact-value">+62 XXX-XXXX-XXXX</p>
-                        </div>
-                    </div>
+			<div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
+				<!-- Section Header -->
+				<div class="text-center mb-16 md:mb-20">
+					<p class="text-gray-300 text-sm md:text-base mb-4 font-light tracking-wider">(the)</p>
+					<h2 class="text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light italic leading-tight">
+						Most Awarded Coffee Roaster
+					</h2>
+				</div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                            <div class="icon-pulse"></div>
-                        </div>
-                        <div class="contact-details">
-                            <p class="contact-label">Email</p>
-                            <p class="contact-value">info@jpcoffeefactory.com</p>
-                        </div>
-                    </div>
+				<!-- Awards Grid -->
+				<div class="grid md:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+					<!-- Award 1 -->
+					<div class="award-card text-center">
+						<div class="text-gray-400 text-sm md:text-base mb-4 font-light">2018</div>
+						<h3 class="text-white text-xl md:text-2xl font-semibold mb-2 leading-tight">
+							Good Food Award<br />
+							Winner
+						</h3>
+						<p class="text-gray-300 text-sm">Winner</p>
+					</div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="icon-pulse"></div>
-                        </div>
-                        <div class="contact-details">
-                            <p class="contact-label">Address</p>
-                            <p class="contact-value">Your Factory Address<br>City, Province, Indonesia</p>
-                        </div>
-                    </div>
+					<!-- Award 2 -->
+					<div class="award-card text-center">
+						<div class="text-gray-400 text-sm md:text-base mb-4 font-light">2016</div>
+						<h3 class="text-white text-xl md:text-2xl font-semibold mb-2 leading-tight">
+							About You Magazine
+						</h3>
+						<p class="text-gray-300 text-sm">Best List</p>
+					</div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-truck"></i>
-                            <div class="icon-pulse"></div>
-                        </div>
-                        <div class="contact-details">
-                            <p class="contact-label">Delivery</p>
-                            <p class="contact-value">Nationwide shipping available</p>
-                        </div>
-                    </div>
+					<!-- Award 3 -->
+					<div class="award-card text-center">
+						<div class="text-gray-400 text-sm md:text-base mb-4 font-light">2015</div>
+						<h3 class="text-white text-xl md:text-2xl font-semibold mb-2 leading-tight">
+							Good Food Award<br />
+							Winner
+						</h3>
+						<p class="text-gray-300 text-sm">Winner</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-                    <!-- Social Media -->
-                    <div class="social-media">
-                        <h5>Follow Us</h5>
-                        <div class="social-links">
-                            <a href="#" class="social-link">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+		<!-- Come Visit Us Section -->
+		<section class="min-h-screen visit-section text-black">
+			<!-- Swiper testimonials container -->
+			<div class="bg-white py-5">
+				<div class="swiper testimonials-swiper">
+					<div class="swiper-wrapper">
+						<!-- Testimonial 1 -->
+						<div class="swiper-slide">
+							<div class="testimonial-content">
+								<p class="testimonial-text">
+									"This advent calendar has truly been one of my favorite for years, and it's the Onyx
+									advent calendar available on Bean Box."
+								</p>
+								<div class="testimonial-source">
+									<img
+										src="https://stp.ipb.ac.id/wp-content/uploads/2023/01/kapal-api-logo-BDA931D774-seeklogo.com_.png"
+										alt="Kapal Api"
+										class="source-logo"
+									/>
+								</div>
+							</div>
+						</div>
 
-                <!-- Contact Form -->
-                <div class="contact-form-container">
-                    <div class="contact-form-card">
-                        <div class="form-header">
-                            <h4>Send us a Message</h4>
-                            <p class="form-description">We'll get back to you within 24 hours</p>
-                        </div>
-                        
-                        <form class="contact-form" id="contactForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                                    <div class="input-focus-effect"></div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-                                    <div class="input-focus-effect"></div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                                <div class="input-focus-effect"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <select id="subject" name="subject" required>
-                                    <option value="">Select a subject</option>
-                                    <option value="product-inquiry">Product Inquiry</option>
-                                    <option value="bulk-order">Bulk Order</option>
-                                    <option value="partnership">Partnership</option>
-                                    <option value="other">Other</option>
-                                </select>
-                                <div class="input-focus-effect"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your inquiry..." required></textarea>
-                                <div class="input-focus-effect"></div>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-full btn-submit">
-                                <span class="btn-text">Send Message</span>
-                                <span class="btn-loading">
-                                    <i class="fas fa-spinner fa-spin"></i>
-                                    Sending...
-                                </span>
-                                <i class="fas fa-paper-plane btn-icon"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+						<!-- Testimonial 2 -->
+						<div class="swiper-slide">
+							<div class="testimonial-content">
+								<p class="testimonial-text">
+									"Onyx Coffee Lab adds to the U.S.'s booming gourmet coffee scene with its dedication
+									to transparency and sustainability."
+								</p>
+								<div class="testimonial-source">
+									<img
+										src="https://mudaberdaya.id/wp-content/uploads/2018/01/Logo-Nescafe.png"
+										alt="Nescafe"
+										class="source-logo"
+									/>
+								</div>
+							</div>
+						</div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-glow"></div>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-brand">
-                        <div class="logo-container">
-                            <i class="fas fa-coffee logo-icon"></i>
-                            <div class="logo-glow"></div>
-                        </div>
-                        <h3>JP Coffee Factory</h3>
-                    </div>
-                    <p>Premium Indonesian coffee powder manufacturer, delivering authentic taste and quality since our establishment. Experience the difference with every cup.</p>
-                    <div class="footer-stats">
-                        <div class="footer-stat">
-                            <strong>1000+</strong>
-                            <span>Happy Customers</span>
-                        </div>
-                        <div class="footer-stat">
-                            <strong>5★</strong>
-                            <span>Average Rating</span>
-                        </div>
-                    </div>
-                </div>
+						<!-- Testimonial 3 -->
+						<div class="swiper-slide">
+							<div class="testimonial-content">
+								<p class="testimonial-text">
+									"Coffee lovers will love Onyx Coffee Lab's journey through the world of specialty
+									coffee with day exploration of beans."
+								</p>
+								<div class="testimonial-source">
+									<img
+										src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXlFuls_5UXV1cyErdywnGEXgHXDnv05uIgw&s"
+										alt="Coffee Brand"
+										class="source-logo"
+									/>
+								</div>
+							</div>
+						</div>
+						<!-- Testimonial 1 -->
+						<div class="swiper-slide">
+							<div class="testimonial-content">
+								<p class="testimonial-text">
+									"This advent calendar has truly been one of my favorite for years, and it's the Onyx
+									advent calendar available on Bean Box."
+								</p>
+								<div class="testimonial-source">
+									<img
+										src="https://stp.ipb.ac.id/wp-content/uploads/2023/01/kapal-api-logo-BDA931D774-seeklogo.com_.png"
+										alt="Kapal Api"
+										class="source-logo"
+									/>
+								</div>
+							</div>
+						</div>
 
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="#products"><i class="fas fa-coffee"></i> Products</a></li>
-                        <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                    </ul>
-                </div>
+						<!-- Testimonial 2 -->
+						<div class="swiper-slide">
+							<div class="testimonial-content">
+								<p class="testimonial-text">
+									"Onyx Coffee Lab adds to the U.S.'s booming gourmet coffee scene with its dedication
+									to transparency and sustainability."
+								</p>
+								<div class="testimonial-source">
+									<img
+										src="https://mudaberdaya.id/wp-content/uploads/2018/01/Logo-Nescafe.png"
+										alt="Nescafe"
+										class="source-logo"
+									/>
+								</div>
+							</div>
+						</div>
 
-                <div class="footer-section">
-                    <h4>Our Products</h4>
-                    <ul>
-                        <li><i class="fas fa-coffee"></i> KOPI BUBUK CAP JP - 90g</li>
-                        <li><i class="fas fa-coffee"></i> KOPI BUBUK CAP JP - 255g</li>
-                        <li><i class="fas fa-coffee"></i> KOPI BUBUK CAP JP - 500g</li>
-                    </ul>
-                    <div class="quality-badges">
-                        <div class="badge-item">
-                            <i class="fas fa-certificate"></i>
-                            <span>ISO Certified</span>
-                        </div>
-                        <div class="badge-item">
-                            <i class="fas fa-leaf"></i>
-                            <span>100% Natural</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+						<!-- Testimonial 3 -->
+						<div class="swiper-slide">
+							<div class="testimonial-content">
+								<p class="testimonial-text">
+									"Coffee lovers will love Onyx Coffee Lab's journey through the world of specialty
+									coffee with day exploration of beans."
+								</p>
+								<div class="testimonial-source">
+									<img
+										src="https://thebreeze.bsdcity.com/wp-content/uploads/2021/11/FORE-1.jpg"
+										alt="Coffee Brand"
+										class="source-logo"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="max-w-7xl mx-auto px-4 md:px-6">
+				<div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center min-h-[80vh]">
+					<!-- Left Content - Coffee Shop Image -->
+					<div class="flex justify-center lg:justify-end">
+						<div class="relative max-w-2xl w-full">
+							<img
+								src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+								alt="Barista working at coffee shop"
+								class="w-full h-auto object-cover shadow-2xl"
+							/>
 
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2024 JP Coffee Factory. All rights reserved.</p>
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Sitemap</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+							<!-- Subtle overlay for branding consistency -->
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent rounded-lg"
+							></div>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+							<!-- Optional decorative elements -->
+							<div
+								class="absolute -bottom-4 -right-4 w-20 h-20 bg-amber-100 rounded-full opacity-80 blur-sm"
+							></div>
+							<div
+								class="absolute -top-4 -left-4 w-16 h-16 bg-stone-200 rounded-full opacity-60 blur-sm"
+							></div>
+						</div>
+					</div>
+					<!-- Right Content -->
+					<div class="space-y-6 md:space-y-8 text-center lg:text-left">
+						<h2
+							class="blackletter-font light-theme text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight"
+						>
+							come visit us
+						</h2>
 
-    <script src="script.js"></script>
-</body>
+						<p
+							class="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto lg:mx-0"
+						>
+							Our community is at the heart of what we do. You can learn more about each of our unique
+							cafes all across Northwest Arkansas as well as our restaurant in Johnson. See cafe hours,
+							explore the menu, and make plans to come see us any day of the week!
+						</p>
 
-<script src="script.js" defer></script>
+						<button
+							class="bg-black text-white px-8 py-4 text-sm font-bold tracking-wider hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+						>
+							OUR LOCATIONS
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- B-Corp Certification Section -->
+		<section class="min-h-screen bcorp-section text-white py-16 md:py-20 lg:py-32 relative overflow-hidden">
+			<!-- Background Image -->
+			<div class="absolute inset-0 z-0">
+				<img
+					src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+					alt="Coffee beans background"
+					class="w-full h-full object-cover"
+				/>
+				<div class="absolute inset-0 bg-black/0"></div>
+			</div>
+
+			<div class="relative z-10 max-w-4xl mx-auto px-4 md:px-6 text-center">
+				<div class="space-y-8 md:space-y-12">
+					<!-- Main Heading -->
+					<h2 class="blackletter-font dark-theme text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight">
+						we are a<br />
+						certified<br />
+						b-corp
+					</h2>
+
+					<!-- Description -->
+					<p class="text-white text-base md:text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
+						This certification is more than a symbol—it's a statement of who we are and how we work. B
+						Corps™ are businesses that meet the highest verified standards of social and environmental
+						performance, transparency, and accountability.
+					</p>
+
+					<!-- CTA Button -->
+					<button
+						class="bg-white text-black px-8 py-4 text-sm font-bold tracking-wider hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+					>
+						LEARN MORE
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer-section bg-gray-950 text-white">
+			<!-- Main Footer Content -->
+			<div class="py-16 md:py-20">
+				<div class="max-w-7xl mx-auto px-4 md:px-6">
+					<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+						<!-- Company Info -->
+						<div class="lg:col-span-2">
+							<div class="flex items-center mb-6">
+								<img src="/logo_kopi_jp.png" alt="Kopi Cap JP" class="h-10 w-10 mr-3" />
+								<h3 class="text-2xl font-bold">Kopi Cap Jempol</h3>
+							</div>
+							<p class="text-gray-300 text-base leading-relaxed mb-6 max-w-md">
+								Join us in seeking quality, truth, and accountability in coffee. Together, we journey to
+								find the finest and most unique coffees in the world.
+							</p>
+							<!-- Social Media Links -->
+							<div class="flex space-x-4">
+								<a
+									href="#"
+									class="social-link bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors"
+								>
+									<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+										/>
+									</svg>
+								</a>
+								<a
+									href="#"
+									class="social-link bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors"
+								>
+									<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"
+										/>
+									</svg>
+								</a>
+								<a
+									href="#"
+									class="social-link bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors"
+								>
+									<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.219-.359-1.219c0-1.142.662-1.995 1.488-1.995.703 0 1.042.527 1.042 1.16 0 .719-.219 1.781-.332 2.766-.188.796.399 1.445 1.184 1.445 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .055.229c-.061.254-.196.796-.223.906-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A12.013 12.013 0 0 0 12.017 24c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"
+										/>
+									</svg>
+								</a>
+								<a
+									href="#"
+									class="social-link bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition-colors"
+								>
+									<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+										<path
+											d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+
+						<!-- Quick Links -->
+						<div>
+							<h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+							<ul class="space-y-3">
+								<li>
+									<a href="#" class="footer-link text-gray-300 hover:text-white transition-colors"
+										>Our Blends</a
+									>
+								</li>
+								<li>
+									<a href="#" class="footer-link text-gray-300 hover:text-white transition-colors"
+										>Single Origins</a
+									>
+								</li>
+								<li>
+									<a href="#" class="footer-link text-gray-300 hover:text-white transition-colors"
+										>Equipment</a
+									>
+								</li>
+								<li>
+									<a href="#" class="footer-link text-gray-300 hover:text-white transition-colors"
+										>Brewing Guides</a
+									>
+								</li>
+								<li>
+									<a href="#" class="footer-link text-gray-300 hover:text-white transition-colors"
+										>Wholesale</a
+									>
+								</li>
+								<li>
+									<a href="#" class="footer-link text-gray-300 hover:text-white transition-colors"
+										>About Us</a
+									>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Contact Info -->
+						<div>
+							<h4 class="text-lg font-semibold mb-6">Contact Info</h4>
+							<div class="space-y-3">
+								<div class="flex items-start">
+									<svg
+										class="w-5 h-5 text-gray-400 mt-0.5 mr-3 flex-shrink-0"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+										></path>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+										></path>
+									</svg>
+									<div>
+										<p class="text-gray-300 text-sm">123 Coffee Street</p>
+										<p class="text-gray-300 text-sm">Jakarta, Indonesia 12345</p>
+									</div>
+								</div>
+								<div class="flex items-center">
+									<svg
+										class="w-5 h-5 text-gray-400 mr-3"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+										></path>
+									</svg>
+									<p class="text-gray-300 text-sm">+62 123 456 7890</p>
+								</div>
+								<div class="flex items-center">
+									<svg
+										class="w-5 h-5 text-gray-400 mr-3"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+										></path>
+									</svg>
+									<p class="text-gray-300 text-sm">hello@kopicapjp.com</p>
+								</div>
+								<div class="pt-2">
+									<p class="text-gray-400 text-sm font-medium">Store Hours:</p>
+									<p class="text-gray-300 text-sm">Mon-Fri: 6:00 AM - 8:00 PM</p>
+									<p class="text-gray-300 text-sm">Sat-Sun: 7:00 AM - 9:00 PM</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer Bottom -->
+			<div class="border-t border-gray-800 py-6">
+				<div class="max-w-7xl mx-auto px-4 md:px-6">
+					<div class="flex flex-col md:flex-row justify-between items-center">
+						<div class="text-gray-400 text-sm mb-4 md:mb-0">
+							© 2025 Coffee from Heaven. All rights reserved.
+						</div>
+						<div class="flex space-x-6 text-sm">
+							<a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+							<a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+							<a href="#" class="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script type="module" src="/src/main.js"></script>
+	</body>
 </html>
